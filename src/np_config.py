@@ -12,14 +12,14 @@ def get_api_params():
         # (decimal)
         # The decimal value for the latitude co-ordinate of the location you want
         # the time computed for. Example: 51.75865125
-        "latitude": "30.05310101838021",
+        "latitude": "31.364295",
         # (decimal)
         # The decimal value for the longitude co-ordinate of the location you want
         # the time computed for. Example: -1.25387785
-        "longitude": "31.230989728835304",
+        "longitude": "74.241475",
         # (number)
         # A gregorian calendar year. Example: 2014.
-        "year": f"${date.today().year}",
+        "year": f"{date.today().year}",
         # (boolean)
         # If true, we'll ignore the month and return the calendar for the whole year.
         "annual": "true",
@@ -45,7 +45,8 @@ def get_api_params():
         # 14 - Spiritual Administration of Muslims of Russia
         # 15 - Moonsighting Committee Worldwide (also requires shafaq paramteer)
         # 99 - Custom. See https://aladhan.com/calculation-methods
-        "method": "5",
+        "method": "1",
+        "school": "1",
         # (number)
         # Number of days to adjust hijri date(s). Example: 1 or 2 or -1 or -2
         "adjustment": "1",

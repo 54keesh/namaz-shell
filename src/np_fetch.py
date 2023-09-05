@@ -19,7 +19,7 @@ CONF_DIR = os.path.join(CONFIG_PREFIX, "next-prayer/")
 DATA_DIR = os.path.join(LOCAL_PREFIX, "share/next-prayer/")
 BIN_DIR = os.path.join(LOCAL_PREFIX, "bin/")
 
-ROOT_URL = "http://api.aladhan.com/v1/calendar?"
+ROOT_URL = "http://api.aladhan.com/v1/calendar"
 
 # ANSI colors for terminal output
 BLACK = "\033[30m"
@@ -82,7 +82,7 @@ def get_url():
     Get the URL to fetch the data from.
     """
     params = get_api_params()
-    return ROOT_URL + "&".join([f"{k}={v}" for k, v in params.items()])
+    return ROOT_URL + f"/{params['year']}?" + "&".join([f"{k}={v}" for k, v in params.items()])
 
 
 def write_data(data):
